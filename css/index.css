@@ -1,3 +1,15 @@
+.mediaQuery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reverseQuery {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -168,6 +180,37 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+.navBar {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px dashed #C0C0C0;
+}
+.navBar .title {
+  width: 20%;
+  display: flex;
+}
+@media only screen and (max-width: 500px) {
+  .navBar .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+.navBar a {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+@media only screen and (max-width: 500px) {
+  .navBar {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .footer {
   width: 100%;
   border-top: 2px dashed silver;
@@ -196,6 +239,14 @@ img {
 .home .content-section .img-content img {
   border-radius: 10px;
 }
+@media only screen and (max-width: 500px) {
+  .home .content-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
@@ -207,6 +258,14 @@ img {
 .home .inverse-content .img-content {
   padding-right: 1%;
   padding-left: 0;
+}
+@media only screen and (max-width: 500px) {
+  .home .inverse-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
 }
 .home .content-destination {
   width: 75%;
@@ -224,4 +283,12 @@ img {
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media only screen and (max-width: 500px) {
+  .home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
